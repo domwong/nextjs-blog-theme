@@ -1,3 +1,4 @@
+# inspired by https://github.com/vercel/next.js/tree/canary/examples/with-docker but using ubuntu 18 and node 14 due to swc errors
 # Install dependencies only when needed
 FROM ubuntu:18.04 AS deps
 RUN apt-get update
@@ -64,4 +65,4 @@ EXPOSE 3000
 
 ENV PORT 3000
 
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
